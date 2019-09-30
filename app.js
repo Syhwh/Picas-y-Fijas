@@ -54,11 +54,13 @@ $("input").on('keypress', function (e) {
             $(".results").append('<tr><th scope="row">' + $(".results tr").length + '</th><td>' + test + '</td><td>' + picas + '</td><td>' + fijas + '</td></tr>')
             $(this).val("");
             if (fijas == 4) {
-                alert("Felicidades! Ganaste!! El número era " + number);
+                $("#win").modal('show');
+                $(".win-number").html('<p>Adivinaste el número: ' + number + '</p>');
                 start();
             }
         } else {
-            alert('El número no es válido, recuerda que deben ser cuatro dígitos del 0 al 9 sin repetirse');
+            $("#wnum").modal('show');
+            $(".bad-number").html('<p>El número <strong>' + test + '</strong> no es válido, recuerda que deben ser cuatro dígitos del 0 al 9 sin repetirse.</p>');
             $("input").val("");
         }
     }
