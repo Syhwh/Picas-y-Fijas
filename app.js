@@ -38,7 +38,8 @@ const start = () => {
     number = generateNumber();
     console.log(number);
     $("input").val("");
-    $(".results").html("<tr><th>Número</th><th>Picas</th><th>Fijas</th></tr >");
+    $(".results").html('<thead class="thead-dark"><tr><th scope="col">#Intento</th><th scope="col">Número</th>' +
+        '<th scope="col">Picas</th><th scope="col">Fijas</th></tr></thead>');
 }
 
 var number = 0;
@@ -50,7 +51,7 @@ $("input").on('keypress', function (e) {
         var test = $(this).val();
         if (validate(test)) {
             var [picas, fijas] = checkNumber(number, test);
-            $(".results").append('<tr><td>' + test + '</td><td>' + picas + '</td><td>' + fijas + '</td></tr>')
+            $(".results").append('<tr><th scope="row">' + $(".results tr").length + '</th><td>' + test + '</td><td>' + picas + '</td><td>' + fijas + '</td></tr>')
             $(this).val("");
             if (fijas == 4) {
                 alert("Felicidades! Ganaste!! El número era " + number);

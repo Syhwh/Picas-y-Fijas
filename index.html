@@ -8,17 +8,31 @@
     <title>Picas y Fijas</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <div class="row d-flex justify-content-center align-content-center">
-            <div class="col">
-                <h1>Picas y Fijas</h1>
-                <p>Ingresa cuatro dígitos diferentes y oprime Enter:</p>
-                <input type="text">
-                <table class="results">
+        <div class="row">
+            <div class="col-6 d-flex flex-column mx-auto align-items-center">
+                <h1 class="mt-3">Picas y Fijas</h1>
+                <p class="mt-2 text-justify">Hola, este juego consiste en adivinar un número de cuatro dígitos
+                    diferentes, la
+                    cantidad de picas de un intento representa la cantidad de dígitos correctos pero en posiciones
+                    incorrectas y el número de
+                    fijas representa los digitos que estan en la posición correcta.
+                </p>
+                <p class="mt-2 text-justify">Escribe un número de cuatro dígitos y presiona 'Enter', las picas y las
+                    fijas de tu
+                    intento se verán
+                    reflejadas en la parte de abajo</p>
+                <div class="input-group my-3 col-6">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon3">Tu intento:</span>
+                    </div>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+                </div>
+                <table class="table mt-2 results">
                 </table>
             </div>
         </div>
